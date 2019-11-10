@@ -96,10 +96,10 @@ output = model.fit_generator(train_generator ,
                          )
                         
 #plotting accuracy and loss graph
-acc = history.history['acc']
-val_acc = history.history['val_acc']
-loss = history.history['loss']
-val_loss = history.history['val_loss']
+acc = output.history['acc']
+val_acc = output.history['val_acc']
+loss = output.history['loss']
+val_loss = output.history['val_loss']
 
 epochs = range(1,len(acc)+1)
 plt.plot(epochs, acc, 'b', label='Training accuracy')
